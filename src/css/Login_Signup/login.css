@@ -1,0 +1,103 @@
+.login {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img::before {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url(../../images/loginBg-icons.svg) no-repeat center center/cover;
+  background-color: rgb(228, 228, 228);
+  content: "";
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+}
+
+.earth-block {
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  margin: 3em auto;
+  transition: transform 200ms linear;
+  animation: rotate 8s linear infinite;
+  border-radius: 50%;
+  background: url(../../images/earth2.png) 0 0 repeat;
+  box-shadow: inset 20px 0 80px 6px rgb(211 211 211);
+  background-size: cover;
+  transform-style: preserve-3d;
+  right: -100px;
+  top: -100px;
+  z-index: -1;
+}
+
+@keyframes rotate {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 900px 0;
+  }
+}
+
+.center {
+  border-radius: 6px;
+  padding: 0;
+  min-height: 65rem;
+  max-width: 100rem;
+  width: 100%;
+  margin: 0px auto;
+  background: #005fdceb;
+  box-shadow: 0 0 6px rgb(0 0 0 / 10%);
+  display: flex;
+}
+
+.alreadySign {
+  color: #fff;
+  text-align: center;
+  font-size: 2rem;
+  margin: 0 0 0 0;
+}
+
+.alreadySign p {
+  margin: 2rem 0px 2rem 0px;
+  font-size: 1.7rem;
+}
+
+.signupLink {
+  font-size: 2rem;
+  display: block;
+  color: white;
+  border: 2px solid white;
+  padding: 1px 6px 3px 6px;
+  border-radius: 32px;
+  text-decoration: none;
+  margin: 0px 11rem 0px 11rem;
+  font-weight: bold;
+}
+
+.signupLink:hover {
+  color: #005fdceb;
+  background-color: #fff;
+}
+
+.signinLink {
+  font-size: 2rem;
+  display: block;
+  color: white;
+  border: 2px solid white;
+  padding: 1px 6px 3px 6px;
+  border-radius: 32px;
+  text-decoration: none;
+  margin: 0px 11rem 0px 11rem;
+  font-weight: bold;
+}
+
+.signinLink:hover {
+  color: #005fdceb;
+  background-color: #fff;
+}

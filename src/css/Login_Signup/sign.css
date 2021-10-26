@@ -1,0 +1,43 @@
+.sign {
+  background-color: #fff;
+  width: 54rem;
+  height: 65rem;
+}
+
+.sign img {
+  width: 17rem;
+  margin: 4rem 0rem 2rem 18rem;
+}
+
+.sign h2 {
+  font-size: 3rem;
+  margin: 0rem 0rem 2rem 9rem;
+}
+
+.sign form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sign input {
+  width: 35rem;
+  margin: 1rem 1rem;
+  font-size: 1.8rem;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  outline: none;
+}
+
+.signbtn {
+  margin: 2rem 0rem;
+  width: 20rem;
+  font-size: 2rem;
+  padding: 6px 6px 6px 6px;
+  color: #fff;
+  background-color: #005fdceb;
+  border-radius: 22px;
+  border: none;
+}

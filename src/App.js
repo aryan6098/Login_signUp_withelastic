@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from "react";
+import Db from "./components/DataBase";
+import Navbar from "./components/Navbar";
+import { SignIn, SignUp } from "./components/Login_Signup";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Home from "./components/Home";
+import { Home, Services, Products } from "./components/pages";
 function App() {
+  Db.ping(
+    {
+      requestTimeout: Infinity,
+    },
+    function (error) {
+      if (error) {
+        console.trace("elasticsearch cluster is down!");
+      } else {
+        console.log("Database is Connected");
+      }
+    }
+  );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <SignIn />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+          <Route path="/services" component={Services} />
+          <Route path="/products" component={Products} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 

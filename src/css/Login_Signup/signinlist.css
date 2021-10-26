@@ -1,0 +1,21 @@
+.list{
+    color:#fff;
+    width:46rem;
+}
+
+.list h2{
+
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 6rem 3rem 4rem 3rem
+}
+
+.list ul{
+    font-size: 2rem;
+    margin: 0 0rem 0px 8rem;
+    
+}
+.list ul li{
+    list-style: none;
+    padding: .4rem;
+}
